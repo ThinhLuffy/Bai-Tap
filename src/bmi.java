@@ -11,21 +11,17 @@ public class bmi {
         System.out.println("nhap vao can nang: ");
         float weight = sc.nextFloat();
 
-        double bmi = weight/(height*height);
+        double bmi = weight / (height * height);
 
         if (bmi < 18.5) {
             System.out.println("Underweight");
-        }
-        else if (18.5 <= bmi && bmi < 25.0) {
+        } else if (18.5 <= bmi && bmi < 25.0) {
             System.out.println("Normal");
-        }
-        else if (25.0 <= bmi && bmi < 30.0) {
+        } else if (25.0 <= bmi && bmi < 30.0) {
             System.out.println("Overweight");
-        }
-        else if (30 <= bmi) {
+        } else if (30 <= bmi) {
             System.out.println("Obese");
-        }
-        else {
+        } else {
             System.out.println("chiu");
         }
     }
