@@ -13,10 +13,14 @@ public class ptbacnhat {
         if (a == 0) {
             System.out.println("Phuong trinh vo nghiem");
         } else {
-            System.out.println("Input b");
+            System.out.println("input b");
             float b = sc.nextFloat();
-            double x = -b / a;
-            System.out.println("Phuong trinh co nghiem: x = " + x);
+            if (b == 0) {
+                System.out.println("Phuong trinh co vo so nghiem");
+            } else {
+                float x = -b / a;
+                System.out.println("Phuong trinh co nghiem: x = " + x);
+            }
         }
     }
 }
