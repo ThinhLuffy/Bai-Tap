@@ -20,7 +20,7 @@ public class tinhnamnhuan {
         if (isLeapYear) {
             System.out.printf("%d is a leap year", year);
         } else {
-            System.out.printf("%d is not a leap year",year);
+            System.out.printf("%d is not a leap year", year);
         }
     }
 }
