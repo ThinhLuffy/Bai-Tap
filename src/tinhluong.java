@@ -10,7 +10,7 @@ public class tinhluong {
         if (hsl > 0 && hsl <= 5) {
             System.out.println("Nhap vao so nam lam viec");
             double nlv = sc.nextDouble();
-            double luong = hsl * 4000000  + nlv * 500000;
+            double luong = hsl * 4000000 + nlv * 500000;
             System.out.println("Luong hien tai cua ban la: " + luong + " VND");
         } else {
             System.out.println("He so luong khong dung");
