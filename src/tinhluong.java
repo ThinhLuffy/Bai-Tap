@@ -11,10 +11,9 @@ public class tinhluong {
             System.out.println("Nhap vao so nam lam viec");
             double nlv = sc.nextDouble();
             double luong = hsl * 4000000 + nlv * 500000;
-            System.out.println("Luong hien tai cua ban la: " + luong + " VND");
+            System.out.printf("Luong hien tai cua ban la %f VND", luong,2);
         } else {
             System.out.println("He so luong khong dung");
         }
-
     }
 }
