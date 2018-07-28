@@ -18,11 +18,23 @@ public class PtBacHai {
             if (delta > 0) {
                 double x1 = (-b + Math.sqrt(delta)) / 2 * a;
                 double x2 = (-b - Math.sqrt(delta)) / 2 * a;
-                System.out.printf("Phương trình có 2 nghiệm x1 = %f và x2 = %f", x1, x2);
+                System.out.printf("Phương trình có 2 nghiệm: x1 = %.0f và x2 = %.0f.", x1, x2);
             } else if (delta == 0) {
                 x = -b / 2 * a;
                 System.out.printf("Phương trình có nghiệm x = %f", x);
             } else if (delta < 0) {
+                System.out.println("Phương trình không có nghiệm thực");
+            }
+        } else {
+            System.out.println("Hiện tại phương trình có dạng: bx + c = 0");
+            if (b != 0) {
+                if (c != 0) {
+                    x = -c / b;
+                    System.out.printf("Phương trình có nghiệm x = %.0f", x);
+                } else {
+                    System.out.println("phương trình có nghiệm x = 0");
+                }
+            } else {
                 System.out.println("Phương trình vô nghiệm");
             }
         }
