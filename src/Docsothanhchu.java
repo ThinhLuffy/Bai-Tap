@@ -174,15 +174,17 @@ public class Docsothanhchu {
                     break;
             }
             if (step1 != "") {
-                System.out.printf(step1);
                 if (step2 != "") {
                     System.out.printf("%s %s", step1, step2);
-                    if (step3 != "") {
+                    if (step3 != ""){
                         System.out.printf("%s and %s %s", step3, step1, step2);
                     }
+                } else {
+                    System.out.printf(step1);
                 }
             }
         }
     }
 }
+
 
