@@ -73,76 +73,113 @@ public class Docsothanhchu {
                     default:
                         break;
             }
-        } else if (number >= 20 && number <= 100) {
+        } else if (number >= 20 && number <= 1000) {
             int chuc = number / 10;
             int donvi = number % 10;
-            String ones;
-            String twos;
+            int tram = number / 100;
+            String step1;
+            String step2;
+            String step3;
             switch (chuc) {
                 case 2:
-                    ones = "Twenty";
+                    step1 = "Twenty";
                     break;
                 case 3:
-                    ones = "Thirty";
+                    step1 = "Thirty";
                     break;
                 case 4:
-                    ones = "Forty";
+                    step1 = "Forty";
                     break;
                 case 5:
-                    ones = "Fifty";
+                    step1 = "Fifty";
                     break;
                 case 6:
-                    ones = "Sixty";
+                    step1 = "Sixty";
                     break;
                 case 7:
-                    ones = "Seventy";
+                    step1 = "Seventy";
                     break;
                 case 8:
-                    ones = "Eighty";
+                    step1 = "Eighty";
                     break;
                 case 9:
-                    ones = "Ninety";
+                    step1 = "Ninety";
                     break;
                     default:
-                        ones = "";
+                        step1 = "";
                         break;
             }
             switch (donvi) {
                 case 1:
-                    twos = "One";
+                    step2 = "One";
                     break;
                 case 2:
-                    twos = "Two";
+                    step2 = "Two";
                     break;
                 case 3:
-                    twos = "Three";
+                    step2 = "Three";
                     break;
                 case 4:
-                    twos = "Four";
+                    step2 = "Four";
                     break;
                 case 5:
-                    twos = "Five";
+                    step2 = "Five";
                     break;
                 case 6:
-                    twos = "Six";
+                    step2 = "Six";
                     break;
                 case 7:
-                    twos = "Seven";
+                    step2 = "Seven";
                     break;
                 case 8:
-                    twos = "Eight";
+                    step2 = "Eight";
                     break;
                 case 9:
-                    twos = "Nine";
+                    step2 = "Nine";
                     break;
                     default:
-                        twos = "";
+                        step2 = "";
                         break;
             }
-            if (ones != "") {
-                if (twos != "") {
-                    System.out.printf("%s %s", ones , twos);
-                }
+            switch (tram) {
+                case 1:
+                    step3 = "One hundred";
+                    break;
+                case 2:
+                    step3 = "Two hundred";
+                    break;
+                case 3:
+                    step3 = "Three hundred";
+                    break;
+                case 4:
+                    step3 = "For hundred";
+                    break;
+                case 5:
+                    step3 = "Five hundred";
+                    break;
+                case 6:
+                    step3 = "Six hundred";
+                    break;
+                case 7:
+                    step3 = "Seven hundred";
+                    break;
+                case 8:
+                    step3 = "Eight hundred";
+                    break;
+                case 9:
+                    step3 = "Nine hundred";
+                    break;
+                    default:
+                        step3 = "";
+                        break;
+            }
+            if (step1 != "") {
+                if (step2 != "")
+                    if (step3 != ""){
+                    System.out.printf("%s and %s %s", step3, step1 , step2);
+                } else {
+                        System.out.printf("%s %s", step1, step2);
+                    }
             }
         }
     }
