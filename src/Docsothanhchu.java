@@ -70,8 +70,8 @@ public class Docsothanhchu {
                 case 9:
                     System.out.println("Nineteen");
                     break;
-                    default:
-                        break;
+                default:
+                    break;
             }
         } else if (number >= 20 && number <= 1000) {
             int chuc = number / 10;
@@ -105,9 +105,9 @@ public class Docsothanhchu {
                 case 9:
                     step1 = "Ninety";
                     break;
-                    default:
-                        step1 = "";
-                        break;
+                default:
+                    step1 = "";
+                    break;
             }
             switch (donvi) {
                 case 1:
@@ -137,9 +137,9 @@ public class Docsothanhchu {
                 case 9:
                     step2 = "Nine";
                     break;
-                    default:
-                        step2 = "";
-                        break;
+                default:
+                    step2 = "";
+                    break;
             }
             switch (tram) {
                 case 1:
@@ -169,17 +169,18 @@ public class Docsothanhchu {
                 case 9:
                     step3 = "Nine hundred";
                     break;
-                    default:
-                        step3 = "";
-                        break;
+                default:
+                    step3 = "";
+                    break;
             }
             if (step1 != "") {
-                if (step2 != "")
-                    if (step3 != ""){
-                    System.out.printf("%s and %s %s", step3, step1 , step2);
-                } else {
-                        System.out.printf("%s %s", step1, step2);
+                System.out.printf(step1);
+                if (step2 != "") {
+                    System.out.printf("%s %s", step1, step2);
+                    if (step3 != "") {
+                        System.out.printf("%s and %s %s", step3, step1, step2);
                     }
+                }
             }
         }
     }
