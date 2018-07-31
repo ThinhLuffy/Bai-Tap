@@ -16,8 +16,8 @@ public class PtBacHai {
         if (a != 0) {
             double delta = b * b - 4 * a * c;
             if (delta > 0) {
-                double x1 = (-b + Math.sqrt(delta)) / 2 * a;
-                double x2 = (-b - Math.sqrt(delta)) / 2 * a;
+                double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                double x2 = (-b - Math.sqrt(delta)) / (2 * a);
                 System.out.printf("Phương trình có 2 nghiệm: x1 = %.0f và x2 = %.0f.", x1, x2);
             } else if (delta == 0) {
                 x = -b / 2 * a;
