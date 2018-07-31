@@ -3,46 +3,50 @@ import java.util.Scanner;
 
 public class Docsothanhchu {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
-        System.out.println("Nhập vào số bạn muốn đọc thành chữ");
+        System.out.println("Nhập vào số muốn đọc thành chữ: ");
+        Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
-        switch (number) {
-            case 0:
-                System.out.println("Zero");
-                break;
-            case 1:
-                System.out.println("One");
-                break;
-            case 2:
-                System.out.println("Two");
-                break;
-            case 3:
-                System.out.println("Three");
-                break;
-            case 4:
-                System.out.println("Four");
-                break;
-            case 5:
-                System.out.println("Five");
-                break;
-            case 6:
-                System.out.println("Six");
-                break;
-            case 7:
-                System.out.println("Seven");
-                break;
-            case 8:
-                System.out.println("Eight");
-                break;
-            case 9:
-                System.out.println("Nine");
-                break;
-            default:
-                break;
-        }
-        int teen = number % 10;
-        if (number >= 10 && number < 20) {
+
+        if (number < 0) return;
+        if (number < 10) {
+            switch (number) {
+                case 0:
+                    System.out.println("Zero");
+                    break;
+                case 1:
+                    System.out.println("One");
+                    break;
+                case 2:
+                    System.out.println("Two");
+                    break;
+                case 3:
+                    System.out.println("Three");
+                    break;
+                case 4:
+                    System.out.println("Four");
+                    break;
+                case 5:
+                    System.out.println("Five");
+                    break;
+                case 6:
+                    System.out.println("Six");
+                    break;
+                case 7:
+                    System.out.println("Seven");
+                    break;
+                case 8:
+                    System.out.println("Eight");
+                    break;
+                case 9:
+                    System.out.println("Nine");
+                    break;
+            }
+        } else if (number < 20) {
+            int teen = number % 10;
             switch (teen) {
+                case 0:
+                    System.out.println("Ten");
+                    break;
                 case 1:
                     System.out.println("Eleven");
                     break;
@@ -53,7 +57,7 @@ public class Docsothanhchu {
                     System.out.println("Thirteen");
                     break;
                 case 4:
-                    System.out.println("Fourteen");
+                    System.out.println("Forteen");
                     break;
                 case 5:
                     System.out.println("Fifteen");
@@ -70,16 +74,12 @@ public class Docsothanhchu {
                 case 9:
                     System.out.println("Nineteen");
                     break;
-                default:
-                    break;
             }
-        } else if (number >= 20 && number <= 1000) {
+        } else if (number < 100) {
             int chuc = number / 10;
             int donvi = number % 10;
-            int tram = number / 100;
             String step1;
             String step2;
-            String step3;
             switch (chuc) {
                 case 2:
                     step1 = "Twenty";
@@ -105,9 +105,9 @@ public class Docsothanhchu {
                 case 9:
                     step1 = "Ninety";
                     break;
-                default:
-                    step1 = "";
-                    break;
+                    default:
+                        step1 = "";
+                        break;
             }
             switch (donvi) {
                 case 1:
@@ -137,54 +137,16 @@ public class Docsothanhchu {
                 case 9:
                     step2 = "Nine";
                     break;
-                default:
-                    step2 = "";
-                    break;
+                    default:
+                        step2 = "";
+                        break;
             }
-            switch (tram) {
-                case 1:
-                    step3 = "One hundred";
-                    break;
-                case 2:
-                    step3 = "Two hundred";
-                    break;
-                case 3:
-                    step3 = "Three hundred";
-                    break;
-                case 4:
-                    step3 = "For hundred";
-                    break;
-                case 5:
-                    step3 = "Five hundred";
-                    break;
-                case 6:
-                    step3 = "Six hundred";
-                    break;
-                case 7:
-                    step3 = "Seven hundred";
-                    break;
-                case 8:
-                    step3 = "Eight hundred";
-                    break;
-                case 9:
-                    step3 = "Nine hundred";
-                    break;
-                default:
-                    step3 = "";
-                    break;
-            }
-            if (step1 != "") {
-                if (step2 != "") {
-                    System.out.printf("%s %s", step1, step2);
-                    if (step3 != ""){
-                        System.out.printf("%s and %s %s", step3, step1, step2);
-                    }
-                } else {
-                    System.out.printf(step1);
-                }
-            }
+            System.out.printf("%s %s", step1 , step2);
+        } else if (number < 1000) {
+            int tram = number / 100;
+            int dutram = tram / 10;
+            int duchuc = dutram / 10;
+            int dudonvi = duchuc % 10;
         }
     }
 }
-
-
