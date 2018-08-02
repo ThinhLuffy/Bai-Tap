@@ -15,5 +15,9 @@ public class TinhTienLai {
         System.out.println("Nhập số tháng gửi");
         month = sc.nextInt();
 
+        double total_rate = 0;
+        for (int i = 0; i < month; i++) {
+            total_rate = money * (rate / 100) / 12 * 3;
+        }
     }
 }
