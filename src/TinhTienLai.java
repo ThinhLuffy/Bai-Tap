@@ -17,7 +17,8 @@ public class TinhTienLai {
 
         double total_rate = 0;
         for (int i = 0; i < month; i++) {
-            total_rate = money * (rate / 100) / 12 * 3;
+            total_rate = money * (rate / 100) / 12 * month;
         }
+        System.out.println("Tổng số tiền nhận được của bạn là: " + total_rate);
     }
 }
