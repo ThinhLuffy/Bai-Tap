@@ -16,8 +16,8 @@ public class Songuyento {
                     check = false;
                     break;
                 }
+                i++;
             }
-            i++;
             if (check)
                 System.out.println(number + " là số nguyên tố");
             else
