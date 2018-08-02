@@ -16,6 +16,21 @@ public class TheFirst20Prime {
                 }
             }
         }
+        for (int i = 2; i < 1000; i++) {
+            boolean check = true;
+            for (int j = 2; j < Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    check = false;
+                    break;
+                }
+            }
+            if (count < number) {
+                if (check) {
+                    System.out.println(i);
+                    count = count + 1;
+                }
+            }
+        }
     }
 }
 
