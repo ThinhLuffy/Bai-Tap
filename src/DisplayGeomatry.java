@@ -30,6 +30,12 @@ public class DisplayGeomatry {
                     }
                     break;
                 case 3:
+                    for (int height = 5; height >= 0; height--) {
+                        for (int width = 0; width < height; width++) {
+                            System.out.print("+");
+                        }
+                        System.out.println();
+                    }
                     break;
                 case 0:
                     System.exit(0);
