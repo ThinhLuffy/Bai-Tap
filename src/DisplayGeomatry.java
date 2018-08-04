@@ -35,7 +35,7 @@ public class DisplayGeomatry {
                     System.out.println("Enter height");
                     height = sc.nextInt();
                     for (int i = 0; i < height; i++) {
-                        for (int j = 0; j < height -i; j++) {
+                        for (int j = 0; j < height - i; j++) {
                             System.out.print("+ ");
                         }
                         System.out.println();
@@ -70,12 +70,25 @@ public class DisplayGeomatry {
                     System.out.println("Triangle bottom-right");
                     System.out.println("Enter height");
                     height = sc.nextInt();
-                    for (int i = 1; i < height; i++) {
-                        for (int j = 1; j < height; j++) {
-                            if (j >= height - i) {
+                    for (int i = 1; i <= height; i++) {
+                        for (int j = 1; j <= height; j++) {
+                            if (j >= height - i + 1) {
                                 System.out.print("+ ");
                             } else
                                 System.out.print("  ");
+                        }
+                        System.out.println();
+                    }
+                    break;
+                case 6:
+                    System.out.println("Isosceles triangle");
+                    System.out.println("Enter width");
+                    width = sc.nextInt();
+                    for (int i = 1; i < (width + 1) / 2; i++) {
+                        for (int j = 1; j < width; j++) {
+                            if (j > (width + 1) / 2 - i && j < (width + 1) / 2 + i) {
+                                System.out.print("+ ");
+                            } else System.out.print("  ");
                         }
                         System.out.println();
                     }
